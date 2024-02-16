@@ -1,5 +1,7 @@
 package main
 
+// Notely App
+
 import (
 	"database/sql"
 	"embed"
