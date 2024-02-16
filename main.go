@@ -1,6 +1,6 @@
 package main
 
-# Notely App
+// Notely App
 
 import (
 	"database/sql"
