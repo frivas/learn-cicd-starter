@@ -21,15 +21,6 @@ jobs:
       - name: Run Build Script
         run: ./scripts/buildprod.sh
 
-  setup-gcloud:
-    name: Setup GCloud
-    runs-on: ubuntu-latest
-
-    permissions:
-      contents: 'read'
-      id-token: 'write'
-
-    steps:
       - name: auth
         uses: google-github-actions/auth@v2
         with:
@@ -41,4 +32,4 @@ jobs:
           version: ">= 363.0.0"
 
       - name: Build and Upload the Image
-        run: gcloud builds submit . --tag europe-southwest1-docker.pkg.dev/notely-414806/notely-ar-repo/notely:latest
+        run: gcloud builds submit --tag europe-southwest1-docker.pkg.dev/notely-414806/notely-ar-repo/notely:latest .
